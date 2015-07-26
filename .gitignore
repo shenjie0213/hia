@@ -13,7 +13,18 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.class
+*.jpg
+*.png
+*.gif
 
+/WebRoot/ckeditor
+/WebRoot/script
+/WebRoot/style
+/WebRoot/umeditor
+/hia
+/WebRoot/WEB-INF/classes
+/WebRoot/WEB-INF/lib
 # Windows shortcuts
 *.lnk
 

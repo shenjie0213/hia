@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	
+	<package name="upocket_" namespace="/" extends="base">
+		<!-- 产品分类Action -->
+        <action name="upocket_*" class="cn.ssh.action.UPocketAction" method="{1}">
+
+        	<result name="meshow">/WEB-INF/jsp/upocketAction/meshow.jsp</result>
+        	<result name="othersshow">/WEB-INF/jsp/upocketAction/othersshow.jsp</result><!-- 解决传中文问题 -->
+        	 	<result name="collection" type="redirectAction">
+        	 	<param name="actionName">upocket_show?</param> 
+                <param name="brandId">${brandId}</param> 
+                <param name="cateId">${cateId}</param> 
+                   <param name="authorId">${authorId}</param> 
+                <param name="collId">${collId}</param> 
+                <param name="pocketType">${pocketType}</param> 
+        	 	
+        	 	</result>
+        		 <result name="remove" type="redirectAction">
+        	 	<param name="actionName">upocket_show?</param> 
+                <param name="brandId">${brandId}</param> 
+                <param name="cateId">${cateId}</param> 
+                   <param name="authorId">${authorId}</param> 
+                <param name="collId">${collId}</param> 
+                <param name="pocketType">${pocketType}</param> 
+        	 	
+        	 	</result>
+        </action>
+      
+	</package>
+
+</struts>
